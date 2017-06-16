@@ -11,8 +11,12 @@ var gameData = require('./gameData');
 var app = express();
 var port = process.env.PORT || 3000;
 
+var bodyParser = require('body-parser')
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+app.use(bodyParser.json());
 
 app.get('/',function (req,res) {
 	console.log("TESTING Home Page");
@@ -86,36 +90,74 @@ app.get('/games/:name/:index',function (req,res,next) {
 	else	next();
 });
 
-/*app.get('/', function (req, res) {
-  console.log("Reuqesting Twit Page");
-  display = true;
-    var templateArgs = {
-      twits: twitData,
-      title: "Tweeter",
-	  display: display
-    }
-	
-    res.render('twitPage', templateArgs);
-  
+app.post('/games/:name/addpost', function (req, res, next) {
+	var game; 
+  	var name = req.params.name;
+	var counter = 0;
+	while(gameData[counter]){
+	if(gameData[counter].link == name){
+		game = gameData[counter];
+		break;
+	}
+	counter++;
+}
+  if (game) {
+	  console.log("req.body.title = ",req.body.title);
+	  console.log("req.body.author = ",req.body.author);
+      var newPost = {
+        title: req.body.title,
+        author: req.body.author
+      };
+
+      game.posts = game.posts || [];
+
+      game.posts.push(newPost);
+      fs.writeFile('gameData.json', JSON.stringify(gameData), function (err) {
+        if (err) {
+          res.status(500).send("Unable to save post to \"database\".");
+        } else {
+          res.status(200).send();
+        }
+      });
+
+  } else {
+    next();
+  }
 });
 
-app.get('/twits/:index',function (req,res,next){
-	display = false;
-	console.log("Reuqesting url params: ", req.params);
-	var idx = req.params.index;
-	var oneTwit = twitData[idx-1];
-	if(oneTwit){
-		var templateArgs = {
-			text: oneTwit.text,
-			author: oneTwit.author,
-			display: display,
-			title: "Twit created by " + oneTwit.author
-		}
-		res.render('twitPage', templateArgs);
-	} else {
-		next();
+app.post('/games/:name/:idx/addcontent', function (req, res, next) {
+	var idx = req.params.idx;
+	var game; 
+  	var name = req.params.name;
+	var counter = 0;
+	while(gameData[counter]){
+	if(gameData[counter].link == name){
+		game = gameData[counter];
+		break;
 	}
-});*/
+	counter++;
+}
+  if (game) {
+	  console.log("req.body.title = ",req.body.title);
+	  console.log("req.body.author = ",req.body.author);
+      var newContent = {
+        content: req.body.content
+      };
+     game.posts[idx].contents = game.posts[idx].contents || [];
+
+      game.posts[idx].contents.push(newContent);
+      fs.writeFile('gameData.json', JSON.stringify(gameData), function (err) {
+        if (err) {
+          res.status(500).send("Unable to save post to \"database\".");
+        } else {
+          res.status(200).send();
+        }
+      });
+
+  } else {
+    next();
+  }
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'images')));

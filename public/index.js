@@ -17,23 +17,20 @@ while(all_post[counter]){
 	counter++;
 }
 
-function generateNewPost(postLink,postTitle,postAuthor){
-	var postTemplate = Handlebars.templates.onePost;
-	var postData = {
-		link: postLink,
-		title: postTitle,
-		author: postAuthor
+function getGamename(){	
+	var path = window.location.pathname.split('/');
+	if (path[0] !== '' && pathComponents[1] !== 'people') {
+		return null;
 	}
-	return postTemplate(postData);
+	return path[2];
 }
 
-function generateNewContent(newContent){
-	var contentTemplate = Handlebars.templates.oneContent;
-	var contentData = {
-		content: newContent	
+function getPos(){	
+	var path = window.location.pathname.split('/');
+	if (path[0] !== '' && pathComponents[1] !== 'people') {
+		return null;
 	}
-	
-	return contentTemplate(contentData);
+	return path[3];
 }
 
 function insertNewPost(){
@@ -41,9 +38,23 @@ function insertNewPost(){
 	var postTitle = document.getElementById("get-title").value;
 	var postAuthor = document.getElementById("get-name").value;
 	if (postTitle && postAuthor) {
-		 var newPost = generateNewPost(postLink,postTitle,postAuthor);
+		 var gameID = getGamename();
+		 storePost(gameID, postTitle, postAuthor, function(err){
+
+			if (err) {
+			  alert("Unable to save post.  Got this error:\n\n" + err);
+			} else {
+
+				var postTemplate = Handlebars.templates.onePost;
+				var templateArgs = {
+					title: postTitle,
+					author: postAuthor
+				};
+		var newpost = postTemplate(templateArgs);
 		 var topic = document.querySelector('.topic');
-		 topic.insertAdjacentHTML('beforeend', newPost);
+		 topic.insertAdjacentHTML('beforeend', newpost);
+	}
+		});
 	}
 	else{
 		alert("Empty Bar");
@@ -52,16 +63,76 @@ function insertNewPost(){
 
 function insertNewContent(){
 	var newContent = document.getElementById("get-content").value;
-	if(newContent){
-		var ContentTemp = generateNewContent(newContent);
-		var in_post = document.querySelector('.in-post');
-		in_post.insertAdjacentHTML('beforeend', ContentTemp);
+	if (newContent) {
+		 var gameID = getGamename();
+		 var pos = getPos();
+		 alert(gameID);
+		 alert(pos);
+		 storeContent(gameID, pos,newContent, function(err){
+
+			if (err) {
+			  alert("Unable to save post.  Got this error:\n\n" + err);
+			} else {
+
+				var postTemplate = Handlebars.templates.oneContent;
+				var templateArgs = {
+					content: newContent
+				};
+		var newpost = postTemplate(templateArgs);
+		 var topic = document.querySelector('.in-post');
+		 topic.insertAdjacentHTML('beforeend', newpost);
+	}
+		});
 	}
 	else{
 		alert("Empty Bar");
 	}
 }
 
+function storePost(gameID, postTitle, postAuthor,callback) {
+
+  var postURL = "/games/"+gameID+"/addpost";
+
+  var postRequest = new XMLHttpRequest();
+  postRequest.open('POST', postURL);
+  postRequest.setRequestHeader('Content-Type', 'application/json');
+
+  postRequest.addEventListener('load', function (event) {
+	var error;
+	if (event.target.status !== 200) {
+	  error = event.target.response;
+	}
+	callback(error);
+  });
+  
+  var postBody = {
+    title: postTitle,
+    author: postAuthor
+  };
+  postRequest.send(JSON.stringify(postBody));
+}
+
+function storeContent(gameID,pos,postContent,callback) {
+
+  var postURL = "/games/" + gameID + "/" + pos + "/addcontent";
+
+  var postRequest = new XMLHttpRequest();
+  postRequest.open('POST', postURL);
+  postRequest.setRequestHeader('Content-Type', 'application/json');
+
+  postRequest.addEventListener('load', function (event) {
+	var error;
+	if (event.target.status !== 200) {
+	  error = event.target.response;
+	}
+	callback(error);
+  });
+  
+  var postBody = {
+    content: postContent
+  };
+  postRequest.send(JSON.stringify(postBody));
+}
 
 function close_contact(){
 	document.getElementById("confirm-delete-modal").classList.add('hidden');
@@ -76,17 +147,3 @@ function create_contact(){
 function close_contact(){
 	document.getElementById("create-game-modal").classList.add('hidden');
 }
-
-/*function search(){
-	var str = document.getElementById("navbar-search-input").value;
-	var twit = document.getElementsByClassName("twit");
-	var texts = document.getElementsByClassName("twit-text");
-	var authors = document.getElementsByClassName("twit-attribution");
-	for(i=0;i<num_twit;i++){
-		if(texts[i].innerHTML.includes(str)||authors[i].innerHTML.includes(str)){
-			twit[i].style.display = "block";
-		}
-		else twit[i].style.display = "none";
-	}
-}*/
-
