@@ -1,0 +1,141 @@
+[
+	{
+		"link": "destiny2",
+		"img-link": "/destiny-2-cover.png",
+		"img-name": "destiny2",
+		"genre": "Open-World-RPG",
+		"rating": "Not released yet",
+		"posts": [
+			{
+				"link": "destiny2/0",
+				"title": "About This Game",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "From the makers of the acclaimed hit game Destiny, comes the much-anticipated FPS sequel that takes you on an epic journey across the solar system. Humanity’s last safe city has fallen to an overwhelming invasion force, led by Ghaul, the imposing commander of the brutal Red Legion. He has stripped the city’s Guardians of their power, and forced the survivors to flee. You will venture to mysterious, unexplored worlds of our solar system to discover an arsenal of weapons and devastating new combat abilities. To defeat the Red Legion and confront Ghaul, you must reunite humanity’s scattered heroes, stand together, and fight back to reclaim our home."
+					},
+					{
+						"content": "It's awesome!"
+					},
+					{
+						"content": "Can't Wait to play!"
+					}
+				]
+			},
+			{
+				"link": "destiny2/1",
+				"title": "DESTINY 2 IS 30FPS ON XBOX ONE X",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "The game's beta will begin on PS4 on July 18 at 10 a.m PT, while those who preordered Destiny 2 on Xbox One can begin playing the beta on July 19 at 10 a.m. PT. The beta than opens up to all PS4 and Xbox One players on July 21 at 10 a.m. PT and will end on July 23 at 9 p.m. PT. The PC beta will begin sometime in August, with specific details to be released in the future."
+					},
+					{
+						"content": "It's close!"
+					},
+					{
+						"content": "That sounds good!"
+					}
+				]
+			},
+			{
+				"link": "destiny2/2",
+				"title": "Release Date Confirmed",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "Luke Smith, the design director for Bungie's upcoming shared-world shooter, confirmed to Geoff Keighley during YouTube Live at E3 that, much like PlayStation 4 Pro, Destiny 2 will run at 30 frames per second on Xbox One X"
+					},
+					{
+						"content": "Then why do we need to ge the new console?"
+					},
+					{
+						"content": "Whatever~"
+					}
+				]
+			}	
+		]
+	},
+	{
+		"link": "dishonored2",
+		"img-link": "/dishonored-2.jpg",
+		"img-name": "dishonored2",
+		"genre": "Action-adventure Stealth",
+		"rating": "9.3/10 by IGN: Amazing",
+		"posts": [
+			{
+				"link": "dishonored2/0",
+				"title": "Keeping Things Interesting",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "You can’t lean too heavily on one approach in Dishonored 2 though, because Arkane keeps switching up central gameplay mechanics in each chapter, and that makes each one feel vital and distinct."
+					},
+					{
+						"content": "In the Dust District, for example, billows of dust will obscure your vision every five minutes or so - but also the guards’, giving you opportunities to slip by that don’t exist on any other map."
+					},
+					{
+						"content": "In the Clockwork Mansion, the layout of each floor can be changed using levers, allowing for quick getaways or access to secret areas."
+					}
+				]
+			},
+			{
+				"link": "dishonored2/1",
+				"title": "The World and Those Who Dwell In it",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "Meanwhile, Dishonored 2’s world is busy doing a great job of accommodating any brand of chaos you can throw at it. "
+					},
+					{
+						"content": "The Southern-European-kissed city of Karnaca is not only beautiful, filled with lush greenery and hugged-by-a-whale-boat peppered harbour, but it’s as dense with secrets as Dishonored’s Dunwall, with layers of guard-infested main paths, twisting alleyways, hidden entrances, and tall, bloodfly-infested buildings."
+					},
+					{
+						"content": "It's awesome!"
+					}
+				]
+			}	
+		]		
+	},
+	{
+		"link": "for-honor",
+		"img-link": "/ForHonor.jpg",
+		"img-name": "for-honor",
+		"genre": "Action",
+		"rating": "8.0/10 by IGN Great",
+		"posts": [
+			{
+				"link": "for-honor/0",
+				"title": "FOR HONOR REVIEW",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "One of the most complete and flexible melee combat systems I've ever experienced."
+					},
+					{
+						"content": "For Honor’s combat is the kind of brutal melee I always wanted, but never thought I’d actually get to play. Its third-person action-game exterior hides a strategically complex fighting game, mixing team-based action with less interesting solo modes, all built on the most flexible and technically complete melee fighting system I’ve ever experienced."
+					},
+					{
+						"content": "It's awesome!"
+					}
+				]
+			},
+			{
+				"link": "for-honor/0",
+				"title": "The Different Shades of Death",
+				"author": "IGN",
+				"contents": [
+					{
+						"content": "For Honor’s excellent combat intricacy is on full display in the one-versus-one Duel and two-versus-two Brawl modes, and these are my favorite ways to experience what it does so well. There’s a very real sense of accomplishment to be had when you square off another player, and your skill in battle is the only determining factor of pulling out a victory."
+					},
+					{
+						"content": "Brawl mode is a similar experience, though like in any team sport you can often be at the mercy of your partner’s skills. (It’s crushing to be winning a fight, only to be jumped by your partner’s opponent after they’ve been killed.) Yet the combat system provides the necessary tools to effectively fight off a second enemy while you’re concentrating on another, and pulling out a victory two-versus-one fight is up there with the most validating feelings to be had."
+					},
+					{
+						"content": "It's awesome!"
+					}
+				]
+			}	
+		]
+	}
+]

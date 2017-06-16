@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>SAMPLE TEXT</title>
+
+    <!-- This is a stylesheet that includes the font you should use -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+
+    <!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+
+    <link rel="stylesheet" href="./style.css" media="screen">
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+      <a href="#"><h1 class="site-title">SAMPLE TEST</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="./index.html">Main</a></li>
+          <!--li class="navitem navlink"><a href="#">SAMPLE TEST</a></li-->
+          <li class="navitem navlink"><a href="./about.html">About</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+		<table class = "topic">
+			<tr class = "one-post">			
+				<td class = "post-title">
+					<a href="#">SAMPLE TEXT</a>
+				</td>
+				<td class = "author">
+					<a href="#">AUTHOR</a>
+				</td>
+			</tr>
+			<tr class = "one-post">				
+				<td class = "post-title">
+					<a href="#">SAMPLE TEXT</a>
+				</td>
+				<td class = "author">
+					<a href="#">AUTHOR</a>
+				</td>
+			</tr>
+			<tr class = "one-post">				
+				<td class = "post-title">
+					<a href="#">SAMPLE TEXT</a>
+				</td>
+				<td class = "author">
+					<a href="#">AUTHOR</a>
+				</td>
+			</tr>
+		</table>
+		
+		
+		<div class = "post-block">
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+		</div>
+		
+	<div class = "create-post">
+		<p>Create Your Post</p>
+		<p id="title">Title</p>
+		<textarea class = "create-post-text" id = "get-title"></textarea><br>
+		<p id="name">Name</p>
+		<textarea class = "create-post-text" id = "get-name"></textarea><br>
+		<input type = "button" value = "Submit" class = "submit-post">	
+	</div>	
+		
+		
+		
+		
+		
+	<button type="button" id="create-contact-us">CONTACT US</button>
+	
+	
+	<div id = "create-game-modal" class="hidden">
+		<div class="modal-dialog">
+		<div class="modal-head">
+			<button type="button" class="modal-close-button">&times;</button>
+			<h3>Contact Infomation</h3>
+		</div>
+		<div class="modal-body">
+			<p id = "contact-info">
+				Email: lixiaome@oregonstate.edu<br>
+				Telephone: xxx-xxx-xxxx
+			</p>
+		</div>
+		<div class="modal-footer">
+		</div>	
+		</div>	
+	</div>
+	</body>
+  <script src="./index.js" charset="utf-8"></script>
+
+</html>

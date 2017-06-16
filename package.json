@@ -1,11 +1,13 @@
 {
   "name": "assignment-5",
   "version": "1.0.0",
-  "description": "Dynamic content with Express and Handlebars",
+  "description": "Gaming Discussing Web",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "handlebars views/partials/twit.handlebars -f public/twitTemplate.js",
+	"build": "handlebars views/partials/onePost.handlebars -f public/postTemplate.js",
+    "prestart": "npm run build",
+	"build": "handlebars views/partials/oneContent.handlebars -f public/contentTemplate.js",
     "prestart": "npm run build",
     "start": "node server.js"
   },

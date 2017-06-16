@@ -1,16 +1,15 @@
 <header>
-  <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
-  <a href="#"><h1 class="site-title"><i class="fa fa-hand-lizard-o"></i> tweeter</h1></a>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+      <a href="#"><h1 class="site-title">Gamersky</h1></a>
 
-  <nav class="navbar">
-    <ul class="navlist">
-      <li class="navitem navlink active"><a href="#">Home</a></li>
-      <li class="navitem navlink"><a href="#">Trending</a></li>
-      <li class="navitem navlink"><a href="#">People</a></li>
-      <li class="navitem navbar-search">
-        <input type="text" id="navbar-search-input" placeholder="Search...">
-        <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
-      </li>
-    </ul>
-  </nav>
-</header>
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink {{#if active_home}}active{{/if}}" id = "Home"><a href="/">Home</a></li>
+          <li class="navitem navlink {{#if active_about}}active{{/if}}" id = "About"><a href="/about">About</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+  </header>

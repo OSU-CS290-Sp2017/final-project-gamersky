@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>SAMPLE TEXT</title>
+
+    <!-- This is a stylesheet that includes the font you should use -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+
+    <!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+
+    <link rel="stylesheet" href="./style.css" media="screen">
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
+      <a href="#"><h1 class="site-title">SAMPLE TEST</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink"><a href="./index.html">Main</a></li>
+          <!--li class="navitem navlink"><a href="#">SAMPLE TEST</a></li-->
+          <li class="navitem navlink active"><a href="./about.html">About</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+		<main class = "in-post">
+			<article class = "one-content">			
+				<div class = "post-content">
+					<p class = "content">SAMPLE TEXT</p>
+				</div>
+				<button type = "button" name = "delete-post" class = "delete-post-button">Delete</button>
+			</article>
+			<article class = "one-content">				
+				<div class = "post-content">
+					<p class = "content">SAMPLE TEXT</p>
+				</div>
+				<button type = "button" name = "delete-post" class = "delete-post-button">Delete</button>
+			</article>
+			<article class = "one-content">				
+				<div class = "post-content">
+					<p class = "content">SAMPLE TEXT</p>
+				</div>
+				<button type = "button" name = "delete-post" class = "delete-post-button">Delete</button>
+			</article>
+		</main >
+		
+		
+		
+		
+		
+		
+		
+		<div class = "post-block">
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+			<div class = "post">
+				<img src="destiny-2-cover.png" alt="destiny-2" height="100" width="120"> 
+				<br>
+				<a href="#">SAMPLE TEXT</a>
+			</div>
+		</div>
+		
+		<div class = "create-discuss">
+		<p>Create Your Post</p>
+		<textarea class = "create-post-text" id = "get-content"></textarea><br>
+		<input type = "button" value = "Submit" class = "submit-post">	
+	</div>	
+		
+	<button type="button" id="create-contact-us">CONTACT US</button>
+	
+	<div id = "confirm-delete-modal" class = "hidden">
+		<div class="modal-dialog">
+			<div class="modal-head">
+				<button type="button" class="modal-close-button">&times;</button>
+				<h3>Are you sure you want to delete this post?</h3>
+			</div>
+			<div class="modal-body">
+					<button type = "button" class = "confirm-delete">Yes</button>
+					<button type = "button" class = "cancel-delete">Cancel</button>
+			</div>
+			<div class="modal-footer">
+			</div>	
+			</div>	
+	</div>
+	
+	<div id = "create-game-modal" class="hidden">
+		<div class="modal-dialog">
+		<div class="modal-head">
+			<button type="button" class="modal-close-button">&times;</button>
+			<h3>Contact Infomation</h3>
+		</div>
+		<div class="modal-body">
+			<p id = "contact-info">
+				Email: lixiaome@oregonstate.edu<br>
+				Telephone: xxx-xxx-xxxx
+			</p>
+		</div>
+		<div class="modal-footer">
+		</div>	
+		</div>	
+	</div>
+	</body>
+  <script src="./index.js" charset="utf-8"></script>
+
+</html>
